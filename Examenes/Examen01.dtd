@@ -1,0 +1,22 @@
+<!ELEMENT videoClub (peliculas, ofertas)>
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT ofertas (oferta*)>
+<!ELEMENT pelicula (nombre, duracion?, precio, (existencias | agotado))>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT duracion EMPTY>
+<!ELEMENT precio EMPTY>
+<!ELEMENT existencias EMPTY>
+<!ELEMENT agotado EMPTY>
+<!ELEMENT oferta (#PCDATA | peliculasReferidas)*>
+<!ELEMENT peliculasReferidas ANY>
+<!ATTLIST videoClub direccion CDATA #IMPLIED 
+                      nombre CDATA #REQUIRED
+                      telefono CDATA #FIXED "957591456">
+<!ATTLIST pelicula codigo ID #REQUIRED
+                temaPrincipal (Terror | CienciaFiccion | Fantasia) "Terror">
+<!ATTLIST peliculasReferidas codigopelicula IDREF #REQUIRED
+                         otroCodigosPeliculas IDREFS #IMPLIED>
+<!ENTITY % atributoCoste "coste CDATA #IMPLIED"> 
+<!ATTLIST precio %atributoCoste;>
+<!ATTLIST oferta %atributoCoste;>
+<!ENTITY dura "2h y 28m">

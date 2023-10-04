@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoClub SYSTEM "Examen01.dtd">
+<videoClub direccion="Calle Rute" nombre="DiViDendo" telefono="957591456">
+  <peliculas>
+    <pelicula codigo="terr" temaPrincipal ="Terror">
+      <nombre>Insiduous</nombre>
+      <duracion/>
+      <precio coste="3'5" />
+      <existencias />
+    </pelicula>
+    <pelicula codigo="cien">
+      <nombre>Spider-man &dura;</nombre>
+      <precio coste="5" />
+      <agotado />
+    </pelicula>
+  </peliculas>
+  <ofertas>
+      <oferta coste="10">3x1 
+        <peliculasReferidas codigopelicula="terr" otroCodigosPeliculas="cien " />
+       
+      </oferta>
+  </ofertas>
+</videoClub>

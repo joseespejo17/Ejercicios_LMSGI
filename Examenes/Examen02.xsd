@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tiendas" type="tipoTiendas" />
+
+  <xs:complexType name="tipoTiendas">
+    <xs:sequence>
+      <xs:element name="tienda" type="tipoTienda" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+<!-- Desventajas: no puedes alternar la posición del elemento. Ventajas: Puedes escribir varios
+    elementos-->
+  <xs:complexType name="tipoTienda">
+    <!-- Desventajas: no puedes repetir el mismo elemento varias veces. 
+      Ventajas: Puedes alternar la posicion de los elementos-->
+    <xs:all>
+      <xs:element name="nombre" type="tipoNombre" />
+      <xs:element name="regalos" type="tipoRegalos" />
+    </xs:all>
+    <xs:attribute name="cif" type="xs:string" />
+    <xs:attribute name="descuentosAplicables" type="tipoDescuentos" />
+  </xs:complexType>
+
+  <xs:complexType name="tipoRegalos" mixed="true">
+    <xs:sequence>
+      <xs:element name="regalo" type="tipoRegalo" />
+      <xs:element name="bombazo" type="tipoBombazo" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoBombazo" mixed="true" >
+    <xs:sequence>
+      <xs:element name="url" type="tipoUrl"/>
+    </xs:sequence>
+    <xs:attribute name="codigo"/>
+  </xs:complexType>
+
+  <xs:complexType name="tipoUrl" mixed="true">
+    <xs:attribute name="tipo" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="tipoRegalo" mixed="true">
+    <xs:sequence>
+      <xs:element name="url" type="tipoUrl"/>
+      <xs:element name="marca" type="tipoMarca" />
+    </xs:sequence>
+    <xs:attribute name="codigo">
+      <xs:simpleType>
+  			<xs:restriction base="xs:string">
+  				<xs:pattern value=".*"/>
+  			</xs:restriction>
+  		</xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="precio" type="tipoNumerico0-10000" />
+    <xs:attribute name="iva" type="tipoNumerico1-200" />
+    <xs:attribute name="descuento" type="tipoPorcentajes" />
+  </xs:complexType>
+
+  <xs:simpleType name="tipoNumerico0-10000">
+  	<xs:restriction base="xs:float">
+  		<xs:minInclusive value="0"/>
+  		<xs:maxInclusive value="10000"/>
+  	</xs:restriction>
+  </xs:simpleType>   
+
+  <xs:simpleType name="tipoNumerico1-200">
+  	<xs:restriction base="tipoNumerico0-10000">
+  		<xs:maxInclusive value="50"/>
+  	</xs:restriction>
+  </xs:simpleType>   
+
+  <xs:simpleType name="porcentaje10y15">
+  	<xs:restriction base="xs:string">
+  		<xs:enumeration value="15%"/>
+  		<xs:enumeration value="10%"/>
+  	</xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="porcentaje20y25">
+  	<xs:restriction base="xs:string">
+  		<xs:enumeration value="20%"/>
+  		<xs:enumeration value="25%"/>
+  	</xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoPorcentajes">
+  	<xs:union memberTypes="porcentaje10y15 porcentaje20y25"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoDescuentos">
+  	<xs:list itemType="tipoPorcentajes"/>
+  </xs:simpleType>
+ 
+  <xs:complexType name="tipoMarca">
+    <!--Ventaja: De entre todos los elementos solo puedo excojer uno Desventaja: como minimo tiene que aparecer uno -->
+    <xs:choice>
+      <xs:element name="mattel" type="tipoVacio"/>
+      <xs:element name="giochiPreziosi" type="tipoVacio"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="tipoNombre" mixed="true" />
+
+  <xs:complexType name="tipoVacio" />
+
+
+</xs:schema>

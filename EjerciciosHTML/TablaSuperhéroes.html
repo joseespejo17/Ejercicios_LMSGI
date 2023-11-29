@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TablaSuperhéroes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Jose Espejo Luna" />
+    <style type="text/css">
+        body {
+            margin: 50px;
+            padding: 0px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11pt;
+            color: #FFFFFF;
+            background-image: url(https://i.pinimg.com/originals/a9/4f/a3/a94fa3a17cad57972a269f451301fd4c.jpg);
+            background-size: cover;
+        }
+
+        h1{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        caption{
+            text-align: left;
+            font-weight: bolder;
+            color: #ffffffdc;
+        }
+
+        table{
+            border-spacing: 10px;
+        }
+
+        th{
+            border: 1px solid #ffffffdc;
+            text-align: left;
+            padding: 5px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgba(173, 216, 230, 0.6);
+            
+        }
+
+        td{
+            border: 1px solid #ffffffdc;
+            padding: 5px;
+            border-radius: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            
+        }
+
+        img{
+            height: 100px;
+            
+            
+        }
+
+        img:hover {
+            border: 1px solid #000000;
+            opacity: 1;
+            transform: scale(2);
+            transition: 3s;
+           
+            
+        }
+
+        a{
+            color: rgba(0, 255, 255, 0.805);
+            
+        }
+
+        .centro{
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Tabla de superhéroes de DC</h1>
+    <table width="100%" >
+        <caption>Superhéroes de DC</caption>
+        <tr>
+            <th><b>Superhéroe</b></th>
+            <th><b>Poderes</b></th>
+            <th><b>Imagen</b></th>
+            <th><b>Biografia</b></th>
+
+        </tr>
+        <tr>
+            <td rowspan="2" class="centro">Batman</td>
+            <td>Inteligencia, habilidades de detective, habilidades marciales</td>
+            <td rowspan="2" class="centro"><img src="https://2.bp.blogspot.com/-0xiLHPvCSzQ/U1MhBbzS-NI/AAAAAAAATvM/QB9mvL53W88/s1600/batman_brave_and_the_bold_by_raede.jpg" alt="Foto de Batman"></td>
+            <td class="centro"><a target="_blank" href="https://es.wikipedia.org/wiki/Batman">Más sobre Batman</a></td>
+        </tr>
+        <tr>
+            <td>Alías: El Caballero Oscuro</td>
+        </tr>
+        <tr>
+            <td class="centro">Superman</td>
+            <td>Vuelo, super fuerza, visión de rayos X</td>
+            <td class="centro"><img src="https://m.media-amazon.com/images/I/61FOSdbFHTL._AC_UF894,1000_QL80_.jpg" alt="Foto de Superman"></td>
+            <td class="centro"><a target="_blank" href="https://es.wikipedia.org/wiki/Superman">Más sobre Superman</a></td>
+        </tr>
+        <tr>
+            <td class="centro">Wonder Woman</td>
+            <td>Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
+            <td class="centro"><img src="https://m.media-amazon.com/images/I/71CQEGan79L._AC_UF894,1000_QL80_.jpg" alt="Foto de Wonder Woman"></td>
+            <td class="centro"><a  target="_blank" href="https://es.wikipedia.org/wiki/Mujer_Maravilla">Más sobre Wonder Woman</a></td>
+        </tr>
+        <tr>
+           <td rowspan="2" class="centro">Flash</td>
+           <td>Velocidad sobrehumana, curvatura del tiempo</td>
+           <td rowspan="2" class="centro"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/L80385-flash-superhero-logo-1544.png/320px-L80385-flash-superhero-logo-1544.png" alt="Foto de flash"></td>
+           <td rowspan="2" class="centro"><a href="https://es.wikipedia.org/wiki/The_Flash_(pel%C3%ADcula)">Más sobre Flash</a></td>
+        </tr>
+        <tr>
+            <td>Miembro de la Liga de la Justicia</td>
+        </tr>
+    </table>
+</body>

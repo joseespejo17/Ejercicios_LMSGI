@@ -1,9 +1,8 @@
 body {
-
-
+    margin: 0px;
     font-family: 'Dancing Script', cursive;
     font-family: 'Open Sans', sans-serif;
-
+    overflow-x: hidden;
 }
 
 #textoTitulo {
@@ -12,6 +11,7 @@ body {
 
 #head {
     display: flex;
+    margin: 20px;
 }
 
 #head>div {
@@ -62,6 +62,7 @@ h1 {
 
 #divPrincipal {
     vertical-align: top;
+    margin: 20px;
 }
 
 .border {
@@ -80,7 +81,7 @@ p {
 }
 
 .padding {
-    padding: 5px;
+    padding: 10px;
     
 }
 
@@ -110,4 +111,7 @@ h2, p{
 }
 .a1:hover{
     color: #ffffff;
+}
+a{
+    text-decoration: none;
 }

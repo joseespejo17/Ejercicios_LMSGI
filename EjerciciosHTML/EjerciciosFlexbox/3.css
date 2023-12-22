@@ -1,13 +1,14 @@
 /* Diferentes navegadores utilizan diferentes márgenes por defecto */
 body{
-    margin:0; /* Igualo los márgenes por defecto de cualquier navegador*/
+    margin: 0; /* Igualo los márgenes por defecto de cualquier navegador*/
 }
 
 /* Contenedor principal. Tendrá Flexbox */
 .container {
     display: flex; /* flex es igual a inline-flex. Los elementos dentro de un flex son flex-items */
+    flex-wrap: wrap;
+    height: 100vh;
     border: 10px solid red;
-    height: 100vh; /* Utiliza el 100% del alto del viewport (parte visible de la página) */ 
     box-sizing: border-box; /* Unifica en un único valor de cada div los siguientes: margin, padding y border*/ 
 }  
 
@@ -18,6 +19,7 @@ body{
   text-align: center;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
   padding: 10px;
+  width: 485px;
 }
 
 /* Colores de cada box */

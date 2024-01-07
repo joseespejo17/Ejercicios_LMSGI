@@ -45,18 +45,6 @@ body {
     text-decoration: underline;
 }
 
-.a2{
-    color: rgb(234, 232, 232);
-    
-}
-
-.a2:hover {
-    background: #64646490;
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-
 h1 {
     text-align: left;
     color: #ffffff;

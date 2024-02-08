@@ -1,9 +1,7 @@
+@import "colors";
 /* Define standard variables and values for website */
-$bgcolor: rgb(255, 255, 255);
-$textcolor: rgb(0, 0, 0);
 $fontsize: 18px;
-$bgPromo: rgba(233, 233, 233, 0.686);
-$colorPromo: rgb(32, 103, 32) !important;
+
 
 /* Use the variables */
 body {
@@ -17,24 +15,16 @@ body {
 }
 
 
-@mixin colorBilling {
-  color: black;
-}
-
-@mixin colorYourCart{
-  color: rgb(189, 189, 189);
-}
-
-@mixin colorPayment{
-  color: gray;
+@mixin colored($color) {
+  color: $color;
 }
 
 h1{
-  @include colorBilling;
+  @include colored(black);
 }
 h2{
-  @include colorPayment;
+  @include colored(rgb(162, 162, 162));
 }
 h3{
-  @include colorYourCart;
+  @include colored(rgb(117, 117, 117));
 }

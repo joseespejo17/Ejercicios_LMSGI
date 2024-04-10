@@ -1,0 +1,20 @@
+@import "colors";
+
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+  } 
+
+  @mixin colored($color) {
+    color: $color;
+  }
+  
+  h1{
+    @include colored(black);
+  }
+  h2{
+    @include colored(rgb(46, 46, 46));
+  }
+  p{
+    @include colored(rgb(0, 0, 0))
+  }
